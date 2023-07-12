@@ -77,22 +77,38 @@ namespace loops
             //Console.WriteLine("Value Stored in myDynamic is: " + myDynamic + "\n DataType Stored is:\t" + myDynamic.GetType());
             //Console.WriteLine("Value Stored in myNum is: " + myNum + "\n Data Type :" + myNum.GetType());
             //Console.ReadKey();
+            //try
+            //{
+            //int num1, num2,result;
+            //Console.WriteLine("Enter FIrst Number");
+            //num1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter Second Number");
+            //num2 = int.Parse(Console.ReadLine());
+            //result = num1 / num2;
+            //Console.WriteLine($"Result After dividing {num1} by {num2} is = \t {result}");
+            //}
+            //catch (Exception ex) { Console.WriteLine("Error!!" + ex.Message); }
+            //finally
+            //{
+            // Console.ReadKey();
+            // Console.WriteLine();
+            //}
             try
             {
-                int num1, num2,result;
-                Console.WriteLine("Enter FIrst Number");
-                num1 = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter Second Number");
-                num2 = int.Parse(Console.ReadLine());
-                result = num1 / num2;
-                Console.WriteLine($"Result After dividing {num1} by {num2} is = \t {result}");
+                Console.WriteLine("Please enter a number");
+                string input = Console.ReadLine();
+                if (int.TryParse(input, out int result))
+                {
+                    Console.WriteLine("Parsed Number using intTryParse is: \t" + result);
+                }
+                else
+                {
+                    Console.WriteLine("Failed tp Parse");
+                }
             }
-            catch (Exception ex) { Console.WriteLine("Error!!" + ex.Message); }
-            finally
-            {
-                Console.ReadKey();
-                Console.WriteLine();
-            }
+            catch (Exception ex)
+            { Console.WriteLine("Error!!" + ex.Message); }
+            finally { Console.ReadKey(); }
             }
     }
 }
