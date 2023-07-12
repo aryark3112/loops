@@ -22,23 +22,42 @@ namespace loops
             //   Console.Write(i + "\t");
             //}
 
-            int num;
-            string choice;
-            do
+            //int num;
+            //string choice;
+            //do
+            //{
+
+            //Console.WriteLine("Enter Number to find out table of the Number");
+            //num = int.Parse(Console.ReadLine());
+            //Console.WriteLine($"Table of {num} as follows");
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    Console.WriteLine($"{num} * {i} = \t {(num * i)}");
+            //}
+            //Console.WriteLine("Do you wanna learn more \n If yes press y \n To Exit press any other key");
+            //choice = Console.ReadLine().ToLower();
+            //}
+            //while (choice == "y");
+            Console.WriteLine("Enter username:");
+            string username = Console.ReadLine();
+
+            Console.WriteLine("Enter password:");
+            string password = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-
-                Console.WriteLine("Enter Number to find out table of the Number");
-                num = int.Parse(Console.ReadLine());
-                Console.WriteLine($"Table of {num} as follows");
-                for (int i = 1; i <= 10; i++)
-                {
-                    Console.WriteLine($"{num} * {i} = \t {(num * i)}");
-                }
-                Console.WriteLine("Do you wanna learn more \n If yes press y \n To Exit press any other key");
-                choice = Console.ReadLine().ToLower();
+                Console.WriteLine("Please provide a username and password.");
             }
-            while (choice == "y");
+            else if (username == "admin1256" && password == "admin@1256@1256")
+            {
+                Console.WriteLine("Sign-in successful.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid user.");
+            }
 
+            Console.ReadLine();
         }
     }
 }
