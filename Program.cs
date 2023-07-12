@@ -115,14 +115,35 @@ namespace loops
             //{ Console.WriteLine("Error!!" + ex.Message); }
             //finally { Console.ReadKey(); }
 
-            double num1, num2, result;
-            Console.WriteLine("Enter First Number");
-            double.TryParse(Console.ReadLine(), out num1);
-            Console.WriteLine("Enter Second Number");
-            double.TryParse(Console.ReadLine(), out num2);
-            result = num1 / num2;
-            Console.WriteLine($"Result after dividing {num1} by {num2} is= \t {result}");
-            Console.ReadKey();
+            //try parse another method
+
+            //double num1, num2, result;
+            //Console.WriteLine("Enter First Number");
+            //double.TryParse(Console.ReadLine(), out num1);
+            //Console.WriteLine("Enter Second Number");
+            //double.TryParse(Console.ReadLine(), out num2);
+            //result = num1 / num2;
+            //Console.WriteLine($"Result after dividing {num1} by {num2} is= \t {result}");
+            //Console.ReadKey();
+
+            try
+            {
+                string input = null;
+                int tryParsedInt;
+                int.TryParse(input, out tryParsedInt);
+                int parsedNumber = int.Parse(Console.ReadLine());
+                Console.WriteLine("Parsed Number is: \t" + parsedNumber);
+
+                int convertedNumber = Convert.ToInt32(input);
+                Console.WriteLine("Convert Number is : \t " + convertedNumber);
+                Console.WriteLine("TryParsed Number is");
+            }
+            catch (Exception ex)
+            { Console.WriteLine("Error!!!" + ex.Message); }
+            finally {
+                Console.ReadKey();
+
+            }
         }
     }
 }
