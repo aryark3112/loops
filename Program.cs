@@ -38,26 +38,36 @@ namespace loops
             //choice = Console.ReadLine().ToLower();
             //}
             //while (choice == "y");
-            Console.WriteLine("Enter username:");
-            string username = Console.ReadLine();
 
-            Console.WriteLine("Enter password:");
-            string password = Console.ReadLine();
+            //Console.WriteLine("Enter username:");
+            //string username = Console.ReadLine();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                Console.WriteLine("Please provide a username and password.");
-            }
-            else if (username == "admin1256" && password == "admin@1256@1256")
-            {
-                Console.WriteLine("Sign-in successful.");
-            }
-            else
-            {
-                Console.WriteLine("Invalid user.");
-            }
+            //Console.WriteLine("Enter password:");
+            //string password = Console.ReadLine();
 
-            Console.ReadLine();
+            //if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            //{
+            //  Console.WriteLine("Please provide a username and password.");
+            //}
+            //else if (username == "admin1256" && password == "admin@1256@1256")
+            //{
+            //  Console.WriteLine("Sign-in successful.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid user.");
+            //}
+
+            //Console.ReadLine();
+            var myNum = 12;
+            var myString = "Sam";
+            var status = true;
+            var grade = "A";
+            Console.WriteLine("Value Stored in myNum is: " + myNum + "\n Data Type :" + myNum.GetType());
+            Console.WriteLine("Value Stored in myString is: " + myString + "\n Data Type :" + myString.GetType());
+            Console.WriteLine("Value Stored in status is: " + status + "\n Data Type :" + status.GetType());
+            Console.WriteLine("Value Stored in grade is: " + grade + "\n Data Type :" + grade.GetType());
+            Console.ReadKey();
         }
     }
 }
